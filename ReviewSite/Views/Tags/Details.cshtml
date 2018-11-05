@@ -1,0 +1,49 @@
+﻿@model ReviewSite.Models.Tags
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tags Details</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Reviews Available for the:  @Model.Text Tag </h1>
+        </header>
+
+        <nav>
+            @foreach (var review in Model.Reviews)
+            {
+                <div>
+
+                    <a href="/Reviews/Details/@review.Id">
+                        @review.Title
+                    </a>
+
+
+                </div>
+            }
+        </nav>
+
+        <footer>
+            <a href="~/Reviews">Go to Home Page</a>
+        </footer>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

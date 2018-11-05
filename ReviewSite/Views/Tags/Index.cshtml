@@ -1,0 +1,41 @@
+﻿    @model IEnumerable<Reviewsite.Models.Tags>
+
+    @{
+    Layout = null;
+    }
+
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Tags Index</title>
+    </head>
+    <body>
+
+        <nav>
+
+            @foreach (var tags in Model)
+                {
+            <div>
+
+                <a href="/Tags/Details/@tags.Id">
+                    @tags.Text
+                </a>
+
+
+            </div>
+                }
+
+        </nav>
+
+
+
+
+
+
+
+
+    </body>
+    </html>

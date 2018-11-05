@@ -15,6 +15,10 @@ namespace ReviewSite.Models
 
         public virtual Category Category { get; set; }
 
+        public virtual List<Comment> Comments { get; set; }
+
+        public virtual List<Tags> Reviews { get; set; } // many to many: between review and tags 
+
         public int CategoryId{ get; set; }
     }
 

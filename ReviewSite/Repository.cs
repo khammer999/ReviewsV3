@@ -35,6 +35,16 @@ namespace ReviewSite
             return db.Set<T>().Find(id);
         }
 
+        public T FindOneTagsById(int id)
+        {
+            return db.Set<T>().Find(id);
+        }
+
+        public T FindOneCommentById(int id)
+        {
+            return db.Set<T>().Find(id);
+        }
+
         public T GetById(int id)
         {
             return db.Set<T>().Find(id);
