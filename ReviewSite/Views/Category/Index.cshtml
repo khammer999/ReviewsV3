@@ -1,0 +1,50 @@
+﻿
+@model IEnumerable<ReviewSite.Models.Category>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+   <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/styles/main.css" />
+
+    <title>Index</title>
+    </head>
+  <body>
+    
+      <main>
+
+          <header>
+              <h1> Category Home Page</h1>
+          </header>
+
+          <section>
+              <p>Avaialble Categories are : </p>
+          </section>
+          <section>
+              <nav>
+
+                  @foreach (var category in Model)
+                  {
+                      <div>
+
+                          <a href="/Category/Details/@category.Id">
+
+                              @category.Name
+                          </a>
+
+                      </div>
+                  }
+              </nav>
+              <footer>
+                  <a href="~/Reviews">Go to Home Page</a>
+              </footer>
+          </section>
+
+      </main>
+   </body>
+</html>

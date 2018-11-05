@@ -1,0 +1,51 @@
+﻿
+@model IEnumerable<ReviewSite.Models.Review>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/styles/main.css" />
+
+
+    <title>Index</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1> Reviews Home Page</h1>
+        </header>
+        <section>
+            <h3>This is the list of available reviews: </h3>
+        </section>
+        <section>
+            <nav>
+
+                @foreach (var review in Model)
+                {
+                    <div>
+
+                        <a href="/Reviews/Details/@review.Id">
+                            @review.Title
+                        </a>
+
+
+                    </div>
+                }
+
+            </nav>
+
+
+            <footer>
+                <a href="~/Category">Go to All Catagories</a>
+            </footer>
+
+        </section>
+    </main>
+</body>
+
+</html>
